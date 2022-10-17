@@ -736,6 +736,7 @@ body {
     margin-left: auto;
     margin-top: 8px;
     margin-right: 8px;
+    cursor: pointer;
 
 }
 
@@ -777,5 +778,61 @@ body {
     border-radius: 4px;
     scale: 1;
     opacity: 1;
+}
+
+/* оформлення полів вводу інформації про клієнта */
+.client-form{
+    width: 448px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+}
+
+
+.form-title{
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.form-field{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.form-field input{
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px ;
+}
+
+.form-field label{
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.01em;
+    color:var(--secondary-text-color);
+}
+
+.form-field textarea{
+    resize: none;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+
 }
 
