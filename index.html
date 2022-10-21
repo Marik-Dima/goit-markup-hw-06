@@ -61,27 +61,43 @@
                                 <h2 class="form-title">Залиште свої дані, ми вам передзвонимо</h2>
                                 <ul class="fields-list list">
                                     <li class="form-field">
-                                        <label for="client-name">Ім'я</label>
-                                        <input type="text" name="client-name" id="client-name" autofocus>
+                                        <label for="client-name" class="form-label">Ім'я</label>
+                                        <input class="form-input" type="text" name="client-name" id="client-name" autofocus>
+                                        <svg class="field-icon">
+                                            <use href="./images/symbol-defs.svg#icon-person">
+                                            </use>
+                                        </svg>
                                     </li>
                                     <li class="form-field">
-                                        <label for="client-tel">Телефон</label>
-                                        <input type="tel" name="client-tel" id="client-tel">
+                                        <label for="client-tel" class="form-label">Телефон</label>
+                                        <input class="form-input" type="tel" name="client-tel" id="client-tel">
+                                            <svg class="field-icon">
+                                                <use href="./images/symbol-defs.svg#icon-phone">
+                                                </use>
+                                            </svg>
                                     </li>
                                     <li class="form-field">
-                                        <label for="client-email">Пошта</label>
-                                        <input type="email" name="client-email" id="client-email">
+                                        <label for="client-email" class="form-label">Пошта</label>
+                                        <input class="form-input" type="email" name="client-email" id="client-email">
+                                        <svg class="field-icon">
+                                            <use href="./images/symbol-defs.svg#icon-email">
+                                            </use>
+                                        </svg>
                                     </li>
                                     <li class="form-field">
-                                        <label for="client-comment">Коментар</label>
-                                        <textarea name="client-comment" id="client-comment" placeholder="Введіть текст"></textarea>
+                                        <label for="client-comment" class="form-label">Коментар</label>
+                                        <textarea class="form-input" name="client-comment" id="client-comment" placeholder="Введіть текст"></textarea>
                                     </li>
                                 </ul>
 
-                                <div class="form-field policy">
-                                    <input type="checkbox" name="policy" id="policy">
-                                    <label for="policy">Погоджуюся з розсилкою та приймаю Умови договору</label>
+                                <div>
+                                    <label class="policy" for="policy">
+                                        <input class="checkbox" type="checkbox" name="policy" id="policy">
+                                        <span class="icon-checkbox"></span> 
+                                        Погоджуюся з розсилкою та приймаю &nbsp<a class="policy-link" href="">Умови договору</a>
+                                    </label>  
                                 </div>
+
                                 <button class="button send-form" type="submit">Відправити</button>
 
                             </form>
@@ -476,18 +492,17 @@
                         </li>
                     </ul>
                 </div>
-                <div class="subscribe-area">
+                <form class="subscribe-area">
                     <div class="subscribe-field">
                         <label for="subscribe-email">Підпишіться на розсилку</label>
                         <input type="email" name="subscribe-email" id="subscribe-email" placeholder="E-mail">
                     </div>
-                    <button class="button subscribe" type="submit">Підписатися 
+                    <button class="button subscribe" type="submit">Підписатися
                         <svg class="icon">
                             <use class="subscribe-icon" href="./images/symbol-defs.svg#icon-send"></use>
                         </svg> 
                     </button>
-
-                </div>
+                </form>
             </div>
         </div>
     </footer>

@@ -223,8 +223,8 @@ body {
     border-radius: 4px;
     border: transparent;
     height: 50px;
-    width: 216px;
-    
+    padding-left: 32px;
+    padding-right: 32px;
     color: var(--primary-white-color);
     background-color: var(--accent-color);
     font-family: inherit;
@@ -446,7 +446,7 @@ body {
     border-radius: 4px;
     color: var(--clients-border-color);
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .company-link:hover,
 .company-link:focus{
@@ -467,18 +467,20 @@ body {
 .button.filter {
     color: var(--primary-text-color);
     background-color: var(--calm-button-bg-color);
+    min-width: 73px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
     letter-spacing: 0.03em;
-    padding: 6px 20px;
+    padding: 6px 22px;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
                 background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
                 box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
+
 /* ховер та фокус для кнопок фільтрації */
 .button.filter:hover,
 .button.filter:focus {
@@ -788,7 +790,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-weight: 700;
-    font-size: 20px;
     line-height: 1.15;
     letter-spacing: 0.03em;
 }
@@ -810,27 +811,49 @@ body {
 
 .form-field{
     display: flex;
+    position: relative;
     flex-direction: column;
     width: 100%;
     margin-bottom: 10px;
     text-align: left;
+    font-size: 12px;
 }
 
-.form-field input{
+.form-input{
     margin: 0;
-    padding: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 42px;
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px ;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field label{
+.form-input:focus,
+.form-input:focus ~ .field-icon{
+    fill:var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.form-label{
     margin-bottom: 4px;
     font-weight: 400;
-    font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
     color:var(--secondary-text-color);
+}
+
+.field-icon{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    display: block;
+    line-height:0px;
+    color: currentColor;
 }
 
 .form-field textarea{
@@ -839,7 +862,6 @@ body {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding: 12px 16px;
-
 }
 
 .form-field textarea::placeholder{
@@ -851,10 +873,58 @@ body {
     color: rgba(117, 117, 117, 0.5);
 }
 
-.form-field.policy{
+/* зголошення на розсилку */
+.policy {
+    position: relative;
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+
+
+
 }
 
+.icon-checkbox {
+    display: inline-block;
+    margin-right: 8.38px;
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    border: solid 2px var(--pure-black-color);
+}
+
+.checkbox{
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+}
+
+.checkbox:checked + .icon-checkbox{
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+    background-image: url(../images/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+}
+
+.policy-link {
+    color: var(--accent-color);
+}
+
+/* кнопка відправити форму */
 .button.send-form{
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -865,6 +935,7 @@ body {
 .button.send-form:focus{
     background-color: #188CE8;
 }
+
 
 /* підписка у футері */
 
@@ -922,7 +993,15 @@ body {
     width: 200px;
     display: flex;
     justify-content: center;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.button.subscribe:hover,
+.button.subscribe:focus {
+    background-color: #188CE8;
+}
+
 /* іконка підписки */
 .subscribe .icon{
     width: 24px;
@@ -930,4 +1009,11 @@ body {
     fill: var(--primary-white-color);
     margin-left: 10px;
 }
+
+.button.s {
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 
