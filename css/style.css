@@ -888,13 +888,13 @@ body {
 
     color: var(--secondary-text-color);
     font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
+    font-size: 14px;
+    line-height: 1.72;
 }
 
 /* первинний стан кастомного чекбоксу */
 .icon-checkbox {
-    display: inline-block;
+    display: flex;
     margin-right: 8px;
     width: 16px;
     height: 15px;
@@ -923,8 +923,12 @@ body {
 .icon-checked{
     position: absolute;
 
-    top:0;
-    left:43px;
+    top: 50%;
+    left: 17px;
+    
+    transform: translateY(-50%);
+
+   
     border-radius: 2px;
     background: var(--accent-color);
     width: 16px;
