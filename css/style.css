@@ -728,6 +728,9 @@ body {
 /* кнопка закриття модального вікна */
 .btn-modal-close{
     display: flex;
+    position: absolute;
+    top: 8px;
+    right: 8px;
     padding: 0;
     border-radius: 50%;
     width: 30px;
@@ -736,10 +739,7 @@ body {
     align-items: center;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--primary-white-color);
-    margin-left: auto;
-    margin-top: 8px;
-    margin-right: 8px;
-    margin-bottom: 2px;
+
     cursor: pointer;
 
 }
@@ -748,6 +748,7 @@ body {
 .order-window .close{
     fill: var(--pure-black-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 /* ховер  */
 .btn-modal-close:hover .close{
@@ -786,12 +787,13 @@ body {
 
 /* оформлення полів вводу інформації про клієнта */
 .client-form{
-    width: 448px;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: 0.03em;
+
+    padding: 40px;
 }
 
 /* заголовок форми */
@@ -928,7 +930,6 @@ body {
     
     transform: translateY(-50%);
 
-   
     border-radius: 2px;
     background: var(--accent-color);
     width: 16px;
@@ -942,7 +943,7 @@ body {
 }
 /* чек стан бордеру кастомного чекбоксу */
 .checkbox:checked ~ .icon-checkbox{
-    border-color: var(--accent-color);
+    border-color: var(--accent-color); 
 }
 /* чек стан чекбоксу  */
 .checkbox:checked ~ .icon-checked{
@@ -956,6 +957,8 @@ body {
 
 /* кнопка відправити форму */
 .button.send-form{
+    width: 200px;
+    padding: 0;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
